@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sports Registration Form</title>
+</head>
+<body>
+
+    <h1>Sports Registration Form</h1>
+
+    <form action="/submit_registration" method="post">
+        <fieldset>
+            <legend>Personal Information</legend>
+            <label for="fullName">Full Name:</label><br>
+            <input type="text" id="fullName" name="fullName" required><br><br>
+
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" required><br><br>
+
+            <label for="phone">Phone Number:</label><br>
+            <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="e.g., 123-456-7890"><br><br>
+        </fieldset>
+
+        <fieldset>
+            <legend>Sport Selection</legend>
+            <label for="sport">Choose your Sport:</label><br>
+            <select id="sport" name="sport" required>
+                <option value="">--Please choose an option--</option>
+                <option value="basketball">Basketball</option>
+                <option value="soccer">Soccer</option>
+                <option value="tennis">Tennis</option>
+                <option value="swimming">Swimming</option>
+                <option value="running">Running</option>
+                <option value="other">Other</option>
+            </select><br><br>
+
+            <label>Skill Level:</label><br>
+            <input type="radio" id="beginner" name="skillLevel" value="beginner">
+            <label for="beginner">Beginner</label><br>
+            <input type="radio" id="intermediate" name="skillLevel" value="intermediate">
+            <label for="intermediate">Intermediate</label><br>
+            <input type="radio" id="advanced" name="skillLevel" value="advanced">
+            <label for="advanced">Advanced</label><br><br>
+        </fieldset>
+
+        <fieldset>
+            <legend>Additional Information</legend>
+            <label for="comments">Any specific requirements or comments?</label><br>
+            <textarea id="comments" name="comments" rows="4" cols="50"></textarea><br><br>
+        </fieldset>
+
+        <input type="submit" value="Register">
+    </form>
+
+</body>
+</html>
