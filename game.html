@@ -1,21 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple Click Game</title>
-    <link rel="stylesheet" href="style.css"> <!-- Link to your CSS file for styling -->
+    <title>Car Racing Game</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="game-container">
-        <h1>Click the Box!</h1>
-        <div id="game-area">
-            <div id="clickable-box"></div>
+    <div class="game-container">
+        <div class="gameArea">
+            <!-- Player car will be added here -->
+            <div class="player-car" style="background: url('your_car.png') no-repeat; background-size: 100% 100%;"></div>
+            <!-- Enemy cars will be added here -->
+            <div class="opponent-car" style="background: url('opponent_car.png') no-repeat; background-size: 100% 100%;"></div>
+            <!-- Road lines will be added here -->
         </div>
-        <p>Score: <span id="score">0</span></p>
-        <button id="start-button">Start Game</button>
+        <div id="score">0</div>
+        <div id="game-over-screen" class="hidden">
+            <p>Game Over!</p>
+            <button id="restart-button">Restart</button>
+        </div>
     </div>
-
-    <script src="script.js"></script> <!-- Link to your JavaScript file for game logic -->
+    <script src="script.js"></script>
 </body>
 </html>
